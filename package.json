@@ -44,10 +44,6 @@
       ]
     ]
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "devDependencies": {
     "babel-cli": "6.7.5",
     "babel-loader": "6.2.4",
