@@ -46,6 +46,7 @@ describe('catch.all', function() {
 
     it('Return an error from catch', async function(done) {
       const promises = [
+        'rest',
         Promise.reject('test value'),
         'rest',
       ];
