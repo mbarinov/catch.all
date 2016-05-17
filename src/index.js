@@ -1,4 +1,4 @@
-const catchAll = (promises) => {
+const catchAll = promises => {
   return new Promise((resolve, reject) => {
     const rejected = [];
     let idx = 0;
