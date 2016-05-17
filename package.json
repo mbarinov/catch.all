@@ -36,10 +36,12 @@
       "stage-0"
     ],
     "plugins": [
-      ["transform-runtime", {
-        "polyfill": false,
-        "regenerator": true
-      }]
+      [
+        "transform-runtime", {
+          "polyfill": false,
+          "regenerator": true
+        }
+      ]
     ]
   },
   "files": [
@@ -65,7 +67,7 @@
     "npm-run-all": "1.7.0",
     "nyc": "6.4.0",
     "rimraf": "2.5.2",
-    "semantic-release": "^4.2.1",
+    "semantic-release": "^4.3.5",
     "webpack": "1.13.0"
   },
   "keywords": [
