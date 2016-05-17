@@ -3,6 +3,10 @@
   "version": "0.0.0-semantically-released",
   "description": "Catch all rejected promises",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbarinov/catch.all.git"
+  },
   "scripts": {
     "commit": "git-cz",
     "check-coverage": "nyc check-coverage --statements 90 --branches 80 --functions 100 --lines 100",
