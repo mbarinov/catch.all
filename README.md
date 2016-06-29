@@ -7,6 +7,8 @@
 [![MIT License](https://img.shields.io/npm/l/catch.all.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 
+[JS playground](https://tonicdev.com/5773dc8844e49613004016d4/5773dc8844e49613004016d5)
+
 Get all errors from an array of promises.
 
 ## Installation
@@ -21,15 +23,26 @@ npm install catch.all
 
 ```javascript
 import catchAll from 'catch.all';
- 
-catchAll(promises)
- .then(errors => {
-  // An array of errors
-  return errors;
- })
- .catch(e => {
-  console.log(e);
- });
+
+const promises = [
+    Promise.reject('error1'),
+    Promise.reject('error2')
+]
+
+catchAll(promises).then(errors => {
+    console.log(errors)
+    // ['error1','error2']
+    return errors
+})
+
+const badArg = {};
+
+catchAll(badArg)
+.catch(e => {
+    console.log(e.message)
+    // "promises[Symbol.iterator] is not a function"
+});
+
 ```
 
 ## Other
